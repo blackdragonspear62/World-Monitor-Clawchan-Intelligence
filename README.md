@@ -1,16 +1,15 @@
 <div align="center">
 
-<img src="docs/presentations/clawchan-cover.png" width="100%" alt="Clawchan Intelligence Agency">
+<img src="docs/architecture/dashboard-hero.png" width="100%" alt="Clawchan Intelligence Agency Dashboard">
 
 # 🌍 WORLD MONITOR v2
 ## CLAWCHAN INTELLIGENCE AGENCY
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-49%20files-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-3D%20Globe-black?logo=three.js)](https://threejs.org/)
-[![Vite](https://img.shields.io/badge/Vite-Build%20Tool-646CFF?logo=vite)](https://vitejs.dev/)
-[![Tailwind](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
-[![Zustand](https://img.shields.io/badge/Zustand-State%20Management-FF6B6B)](https://github.com/pmndrs/zustand)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 **Real-time Global Intelligence Dashboard with Bloomberg Terminal-style Interface**
 
@@ -24,7 +23,7 @@
 
 | Metric | Value |
 |--------|-------|
-| **Total Files** | 84 files |
+| **Total Files** | 84+ files |
 | **TypeScript** | 49 files (Frontend + Node.js Backend) |
 | **Python** | 2 files (ML Models) |
 | **Go** | 2 files (Security + WebSocket) |
@@ -39,7 +38,7 @@
 
 ### 🎯 11 Live Intelligence Widgets
 
-<img src="docs/presentations/clawchan-global.png" width="100%" alt="Dashboard Overview">
+<img src="docs/architecture/widgets-grid.png" width="100%" alt="Dashboard Widgets">
 
 | Widget | Description | Data Source |
 |--------|-------------|-------------|
@@ -57,22 +56,51 @@
 
 ---
 
-## 🎨 Bloomberg Terminal UI
+## 🏗️ System Architecture
 
-<img src="docs/presentations/clawchan-terminal.pptx.html" width="100%">
+<img src="docs/architecture/system-architecture.png" width="100%" alt="System Architecture">
 
-### Design Features
-- ✅ **Grid Layout** - 4-column responsive widget system
-- ✅ **Navigation Tabs** - ALL, INTEL, TRACKING, FINANCE, SECURITY
-- ✅ **Live Indicators** - Green pulsing dots on all widgets
-- ✅ **Status Bar** - Real-time system metrics & data sources
-- ✅ **Dark Theme** - Professional terminal aesthetic
+### Data Flow
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     DATA SOURCES                                 │
+├─────────────┬─────────────┬─────────────┬───────────────────────┤
+│  ADS-B      │   N2YO      │   USGS      │   CoinGecko           │
+│  Aircraft   │  Satellite  │ Earthquake  │   Crypto              │
+└──────┬──────┴──────┬──────┴──────┬──────┴───────────┬───────────┘
+       │             │             │                  │
+       └─────────────┴──────┬──────┴──────────────────┘
+                            │
+                    ┌───────▼────────┐
+                    │  API Gateway   │
+                    └───────┬────────┘
+                            │
+        ┌───────────────────┼───────────────────┐
+        │                   │                   │
+┌───────▼──────┐  ┌────────▼────────┐  ┌──────▼──────┐
+│   React      │  │   WebSocket     │  │   Data      │
+│   Frontend   │  │   Server        │  │   Pipeline  │
+└───────┬──────┘  └─────────────────┘  └─────────────┘
+        │
+┌───────▼─────────────────────────────────────────────┐
+│              11 INTELLIGENCE WIDGETS                 │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐   │
+│  │  Globe  │ │ Aircraft│ │Satellite│ │ Markets │   │
+│  └─────────┘ └─────────┘ └─────────┘ └─────────┘   │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐   │
+│  │  Crypto │ │  News   │ │ Weather │ │ Seismic │   │
+│  └─────────┘ └─────────┘ └─────────┘ └─────────┘   │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐               │
+│  │ Security│ │ Maritime│ │ SIGINT  │               │
+│  └─────────┘ └─────────┘ └─────────┘               │
+└─────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 🛰️ 3D Globe Visualization
+## 🌐 3D Globe Visualization
 
-<img src="docs/presentations/clawchan-satellite.png" width="100%" alt="Satellite Tracking">
+<img src="docs/architecture/globe-visualization.png" width="100%" alt="3D Globe Visualization">
 
 ### Globe Features
 - 🌍 **Earth Sphere** - Realistic planet with atmosphere glow
@@ -83,55 +111,82 @@
 
 ---
 
-## 🚨 Crisis Monitoring
+## 🎨 Bloomberg Terminal UI
 
-<img src="docs/presentations/clawchan-crisis.png" width="100%" alt="Crisis Monitoring">
+### Design Features
+- ✅ **Grid Layout** - 4-column responsive widget system
+- ✅ **Navigation Tabs** - ALL, INTEL, TRACKING, FINANCE, SECURITY
+- ✅ **Live Indicators** - Green pulsing dots on all widgets
+- ✅ **Status Bar** - Real-time system metrics & data sources
+- ✅ **Dark Theme** - Professional terminal aesthetic
 
 ---
 
-## 🛩️ Aircraft Tracking
+## 🛠️ Tech Stack
 
-<img src="docs/presentations/clawchan-aircraft.png" width="100%" alt="Aircraft Tracking">
+### Frontend
+```
+React 18 + TypeScript + Vite + Tailwind CSS + Three.js
+```
+
+### State Management
+```
+Zustand (lightweight, fast, no boilerplate)
+```
+
+### 3D Visualization
+```
+Three.js + React Three Fiber + OrbitControls
+```
+
+### Icons
+```
+Lucide React (beautiful, consistent icon set)
+```
 
 ---
 
-## 🏗️ Architecture
+## 📁 Project Structure
 
-<img src="docs/presentations/clawchan-architecture.png" width="100%" alt="System Architecture">
-
-### Tech Stack
-```
-Frontend: React 18 + TypeScript + Vite + Tailwind CSS + Three.js
-State: Zustand
-Icons: Lucide React
-Build: Vite 5
-```
-
-### Project Structure
 ```
 📦 World-Monitor-Clawchan-Intelligence
-├── 📁 backend/          # API servers & microservices
-│   ├── api-gateway/
-│   ├── websocket-server/
-│   └── data-ingestion/
-├── 📁 config/           # Configuration files
-├── 📁 docs/             # Documentation
-│   └── presentations/   # Visual assets & slides
-├── 📁 frontend/         # React frontend application
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── widgets/     # 11 intelligence widgets
-│   │   │   ├── ui/          # shadcn/ui components
-│   │   │   └── Globe3D.tsx  # 3D globe component
-│   │   ├── store/           # Zustand state management
-│   │   ├── api/             # API integrations
-│   │   └── hooks/           # Custom React hooks
-│   └── public/
-├── 📁 infra/            # Infrastructure & deployment
-├── 📁 ml/               # Machine learning models
-├── 📁 scripts/          # Utility scripts
-├── 📁 security/         # Security configurations
-└── 📁 tests/            # Test suites
+├── 📁 backend/              # API servers & microservices
+│   ├── api-gateway/         # Central API routing
+│   ├── websocket-server/    # Real-time data streaming
+│   └── data-ingestion/      # Data collection services
+├── 📁 config/               # Configuration files
+├── 📁 docs/                 # Documentation
+│   └── 📁 architecture/     # Visual architecture diagrams
+│       ├── dashboard-hero.png
+│       ├── system-architecture.png
+│       ├── globe-visualization.png
+│       └── widgets-grid.png
+├── 📁 frontend/             # React frontend application
+│   └── src/
+│       ├── components/
+│       │   ├── widgets/     # 11 intelligence widgets
+│       │   │   ├── GlobeWidget.tsx
+│       │   │   ├── AircraftWidget.tsx
+│       │   │   ├── SatelliteWidget.tsx
+│       │   │   ├── MarketWidget.tsx
+│       │   │   ├── CryptoWidget.tsx
+│       │   │   ├── NewsWidget.tsx
+│       │   │   ├── WeatherWidget.tsx
+│       │   │   ├── SeismicWidget.tsx
+│       │   │   ├── SecurityWidget.tsx
+│       │   │   ├── MaritimeWidget.tsx
+│       │   │   └── SigintWidget.tsx
+│       │   ├── ui/          # shadcn/ui components
+│       │   ├── DashboardLayout.tsx
+│       │   └── StatusBar.tsx
+│       ├── store/           # Zustand state management
+│       ├── api/             # API integrations
+│       └── hooks/           # Custom React hooks
+├── 📁 infra/                # Infrastructure & deployment
+├── 📁 ml/                   # Machine learning models
+├── 📁 scripts/              # Utility scripts
+├── 📁 security/             # Security configurations
+└── 📁 tests/                # Test suites
 ```
 
 ---
@@ -178,9 +233,73 @@ npm run build
 
 ---
 
-## 🎨 Visual Design
+## 🎯 Widget Details
 
-<img src="docs/presentations/clawchan-closing.png" width="100%" alt="Thank You">
+### GlobeWidget
+- Three.js 3D globe with wireframe overlay
+- Auto-rotating animation
+- 150+ data points visualization
+- Atmosphere glow effect
+
+### AircraftWidget
+- Live aircraft count: 8,000+
+- ADS-B Exchange integration
+- Callsign, altitude, heading display
+- Real-time position updates
+
+### SatelliteWidget
+- ISS, Starlink, HST, GPS tracking
+- N2YO data source
+- NORAD ID display
+- Altitude & velocity metrics
+
+### MarketWidget
+- S&P 500, Dow Jones, NASDAQ, VIX
+- Real-time price updates
+- Green/red change indicators
+- Volume display
+
+### CryptoWidget
+- BTC, ETH, SOL, XRP prices
+- 24h percentage changes
+- CoinGecko API integration
+- Market cap display
+
+### NewsWidget
+- Multi-source aggregation
+- Category badges (geopolitics, military, tech, finance, disaster)
+- Guardian API integration
+- Real-time feed
+
+### WeatherWidget
+- Multi-city weather display
+- Temperature, humidity, wind speed
+- Weather condition icons
+- OpenWeatherMap API
+
+### SeismicWidget
+- USGS earthquake monitoring
+- Magnitude alerts (green/yellow/orange/red)
+- Location & depth tracking
+- Real-time event feed
+
+### SecurityWidget
+- Cyber threat intelligence
+- Active threat monitoring
+- DDoS, phishing, malware detection
+- Real-time alerts
+
+### MaritimeWidget
+- AIS vessel tracking
+- Cargo, tanker, passenger ships
+- Speed & heading display
+- Global coverage
+
+### SigintWidget
+- Signal intelligence collection
+- Frequency scanning
+- Encrypted signal detection
+- Real-time intercepts
 
 ---
 
