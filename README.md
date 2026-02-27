@@ -11,6 +11,13 @@
 [![Version](https://img.shields.io/badge/VERSION-2.0.0--ALPHA-blue?style=flat-square)](https://clawchan.io)
 [![License](https://img.shields.io/badge/LICENSE-CLASSIFIED-red?style=flat-square)](https://clawchan.io)
 
+<br/>
+
+<p align="center">
+  <img src="img1 (1).jpeg" width="100%" alt="Clawchan Intelligence Agency Hero" />
+</p>
+
+
 <p align="center">
   <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black&style=flat-square" />
   <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript&logoColor=white&style=flat-square" />
@@ -695,7 +702,7 @@ const defaultLayers = {
 │  │ GOOGLE EARTH │  │                                                     │  │
 │  │ ☐ Air Quality│  └─────────────────────────────────────────────────────┘  │
 │  │ ☐ Solar      │                                                          │  │
-│  └──────────────┘  ┌──────────────┬──────────────┬──────────────┐          │
+│  │ └──────────────┘  ┌──────────────┬──────────────┬──────────────┐          │
 │                    │ 📺 LIVE NEWS │ 🤖 AI INSIGHT│ 🎯 STRATEGIC │          │
 │                    │   & TV       │              │   POSTURE    │          │
 │                    │              │              │              │          │
@@ -706,6 +713,13 @@ const defaultLayers = {
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
+
+### Intelligence Modules & Global Tracking
+
+<p align="center">
+  <img src="img1 (2).jpeg" width="49%" alt="Intelligence Module View" />
+  <img src="img1 (3).jpeg" width="49%" alt="Global Tracking Interface" />
+</p>
 
 ### Aircraft Tracking Detail
 
@@ -719,6 +733,7 @@ const defaultLayers = {
 │  V/S: +1,200 fpm │  Last: 2s ago                            │
 └─────────────────────────────────────────────────────────────┘
 ```
+
 
 ---
 
