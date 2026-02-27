@@ -1,268 +1,199 @@
-# CLAWCHAN INTELLIGENCE AGENCY
-## Global Intelligence & Situational Awareness Platform v2.0.0
+<div align="center">
 
-```
-    ██████╗██╗      █████╗ ██╗    ██╗ ██████╗██╗  ██╗ █████╗ ███╗   ██╗
-   ██╔════╝██║     ██╔══██╗██║    ██║██╔════╝██║  ██║██╔══██╗████╗  ██║
-   ██║     ██║     ███████║██║ █╗ ██║██║     ███████║███████║██╔██╗ ██║
-   ██║     ██║     ██╔══██║██║███╗██║██║     ██╔══██║██╔══██║██║╚██╗██║
-   ╚██████╗███████╗██║  ██║╚███╔███╔╝╚██████╗██║  ██║██║  ██║██║ ╚████║
-    ╚═════╝╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝  ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
-                    INTELLIGENCE · SURVEILLANCE · RECONNAISSANCE
-```
+<img src="docs/presentations/clawchan-cover.png" width="100%" alt="Clawchan Intelligence Agency">
 
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/clawchan/agency/ci-cd.yml?branch=main&style=for-the-badge&label=CI%2FCD&color=ff79c6)](https://github.com/clawchan/agency/actions)
-[![Coverage](https://img.shields.io/codecov/c/github/clawchan/agency?style=for-the-badge&color=bd93f9)](https://codecov.io/gh/clawchan/agency)
-[![License](https://img.shields.io/badge/LICENSE-CIA--CLASSIFIED-ff5555?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/VERSION-2.0.0-8be9fd?style=for-the-badge)](package.json)
+# 🌍 WORLD MONITOR v2
+## CLAWCHAN INTELLIGENCE AGENCY
 
----
+[![TypeScript](https://img.shields.io/badge/TypeScript-49%20files-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)](https://reactjs.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-3D%20Globe-black?logo=three.js)](https://threejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-Build%20Tool-646CFF?logo=vite)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss)](https://tailwindcss.com/)
+[![Zustand](https://img.shields.io/badge/Zustand-State%20Management-FF6B6B)](https://github.com/pmndrs/zustand)
 
-## 🎯 MISSION BRIEFING
+**Real-time Global Intelligence Dashboard with Bloomberg Terminal-style Interface**
 
-**CLAWCHAN** is a next-generation **Global Intelligence & Situational Awareness Platform** designed for real-time monitoring, analysis, and visualization of worldwide events. Built with military-grade precision and inspired by the most advanced intelligence systems used by CIA, Pentagon, and Palantir Technologies.
+[🌐 Live Demo](https://g5dg7g55gd4ze.ok.kimi.link) • [📊 Architecture](#architecture) • [🚀 Getting Started](#getting-started)
 
-### Core Capabilities
-
-| Module | Status | Data Source | Latency |
-|--------|--------|-------------|---------|
-| 🌍 **3D Global Intelligence Globe** | ✅ Active | Google Earth Engine + NASA | <100ms |
-| ✈️ **ADS-B Aircraft Tracking** | ✅ Active | OpenSky Network + ADS-B Exchange | Real-time |
-| 🛰️ **Satellite Constellation Monitor** | ✅ Active | N2YO + CelesTrak | <5s |
-| 🌊 **Maritime Vessel Tracking** | ✅ Active | AIS Hub + MarineTraffic | Real-time |
-| 🚦 **Urban Traffic Intelligence** | ✅ Active | Mapillary + City APIs | <30s |
-| 📡 **SIGINT Communications** | ✅ Active | WebSDR + Signal Hound | Real-time |
-| 🌋 **Geophysical Event Monitor** | ✅ Active | USGS + GDACS + EMSC | <60s |
-| 💰 **Financial Intelligence** | ✅ Active | CoinGecko + Alpha Vantage | <1s |
-| 🌤️ **Atmospheric Analysis** | ✅ Active | OpenWeather + Windy | <5min |
-| 📺 **Live Broadcast Intelligence** | ✅ Active | 500+ Global TV Streams | Real-time |
+</div>
 
 ---
 
-## 🏗️ SYSTEM ARCHITECTURE
+## 📊 Repository Statistics
 
+| Metric | Value |
+|--------|-------|
+| **Total Files** | 84 files |
+| **TypeScript** | 49 files (Frontend + Node.js Backend) |
+| **Python** | 2 files (ML Models) |
+| **Go** | 2 files (Security + WebSocket) |
+| **Rust** | 1 file (High-Performance Core) |
+| **Java/Kotlin** | 2 files (Ingestion Service) |
+| **Scala** | 1 file (Stream Analytics) |
+| **C++** | 1 file (Ultra-Low-Latency Engine) |
+
+---
+
+## ✨ Features
+
+### 🎯 11 Live Intelligence Widgets
+
+<img src="docs/presentations/clawchan-global.png" width="100%" alt="Dashboard Overview">
+
+| Widget | Description | Data Source |
+|--------|-------------|-------------|
+| 🌍 **Global Intelligence** | 3D Earth globe with Google Earth AI visualization | Three.js |
+| ✈️ **ADS-B Tracking** | Real-time aircraft tracking (8,000+ aircraft) | ADS-B Exchange |
+| 🛰️ **Satellite Tracking** | ISS, Starlink, GPS, HST, NOAA satellites | N2YO |
+| 📈 **Global Markets** | S&P 500, Dow Jones, NASDAQ, VIX | Yahoo Finance |
+| ₿ **Cryptocurrency** | BTC, ETH, SOL, XRP live prices | CoinGecko |
+| 📰 **Intelligence Feed** | Multi-source news aggregation | Guardian API |
+| 🌤️ **Global Weather** | 6 major cities weather monitoring | OpenWeatherMap |
+| 🌋 **Seismic Monitor** | USGS earthquake alerts | USGS |
+| 🛡️ **Cyber Security** | Threat intelligence & monitoring | Internal |
+| 🚢 **Maritime AIS** | Vessel tracking worldwide | AIS |
+| 📡 **SIGINT Collection** | Signal intelligence & frequency scanning | Internal |
+
+---
+
+## 🎨 Bloomberg Terminal UI
+
+<img src="docs/presentations/clawchan-terminal.pptx.html" width="100%">
+
+### Design Features
+- ✅ **Grid Layout** - 4-column responsive widget system
+- ✅ **Navigation Tabs** - ALL, INTEL, TRACKING, FINANCE, SECURITY
+- ✅ **Live Indicators** - Green pulsing dots on all widgets
+- ✅ **Status Bar** - Real-time system metrics & data sources
+- ✅ **Dark Theme** - Professional terminal aesthetic
+
+---
+
+## 🛰️ 3D Globe Visualization
+
+<img src="docs/presentations/clawchan-satellite.png" width="100%" alt="Satellite Tracking">
+
+### Globe Features
+- 🌍 **Earth Sphere** - Realistic planet with atmosphere glow
+- 🔄 **OrbitControls** - Drag/rotate with mouse
+- ✈️ **Aircraft Markers** - 8+ aircraft with glow effects
+- 🛰️ **Satellite Markers** - 6+ satellites with orbit trails
+- 📊 **Stats Overlay** - Live tracking counts
+
+---
+
+## 🚨 Crisis Monitoring
+
+<img src="docs/presentations/clawchan-crisis.png" width="100%" alt="Crisis Monitoring">
+
+---
+
+## 🛩️ Aircraft Tracking
+
+<img src="docs/presentations/clawchan-aircraft.png" width="100%" alt="Aircraft Tracking">
+
+---
+
+## 🏗️ Architecture
+
+<img src="docs/presentations/clawchan-architecture.png" width="100%" alt="System Architecture">
+
+### Tech Stack
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         CLAWCHAN INTELLIGENCE PLATFORM                       │
-│                    "Omnis Intellectus, Omnis Visio"                         │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
-│  │   REACT 18  │  │  THREE.JS   │  │   ZUSTAND   │  │ TANSTACK    │        │
-│  │  FRONTEND   │  │   3D GLOBE  │  │    STATE    │  │   QUERY     │        │
-│  │  TypeScript │  │   WebGL 2.0 │  │  Management │  │  Data Fetch │        │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘        │
-│         └─────────────────┴─────────────────┴─────────────────┘             │
-│                                    │                                        │
-│                         ┌──────────┴──────────┐                             │
-│                         │   WEBSOCKET GATEWAY │                             │
-│                         │   (Socket.io v4)    │                             │
-│                         └──────────┬──────────┘                             │
-│                                    │                                        │
-│  ┌─────────────────────────────────┼─────────────────────────────────┐     │
-│  │                    MICROSERVICES CLUSTER                         │     │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌─────────┐ │     │
-│  │  │  NODE.JS │ │  PYTHON  │ │    GO    │ │   RUST   │ │  JAVA   │ │     │
-│  │  │ GraphQL  │ │ FastAPI  │ │   Gin    │ │  Tokio   │ │ Spring  │ │     │
-│  │  │  API GW  │ │   ML/AI  │ │  Stream  │ │ High-Perf│ │  Boot   │ │     │
-│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └─────────┘ │     │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐                          │     │
-│  │  │  ELIXIR  │ │    C++   │ │  KOTLIN  │                          │     │
-│  │  │ Phoenix  │ │  Boost   │ │  Coroutines                        │     │
-│  │  │ Real-time│ │  HPC     │ │  Android │                          │     │
-│  │  └──────────┘ └──────────┘ └──────────┘                          │     │
-│  └──────────────────────────────────────────────────────────────────┘     │
-│                                    │                                        │
-│  ┌─────────────────────────────────┼─────────────────────────────────┐     │
-│  │                      DATA LAYER                                   │     │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌─────────┐  │     │
-│  │  │PostgreSQL│ │  Redis   │ │ MongoDB  │ │  Kafka   │ │ClickHouse│ │     │
-│  │  │  (RDS)   │ │Cluster   │ │ (Atlas)  │ │Cluster   │ │Analytics │ │     │
-│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ └─────────┘  │     │
-│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐              │     │
-│  │  │InfluxDB  │ │Elasticsearch│ │  S3     │ │ CloudFront│              │     │
-│  │  │ TimeSeries│ │    Logs    │ │ (Assets)│ │    CDN    │              │     │
-│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘              │     │
-│  └──────────────────────────────────────────────────────────────────┘     │
-│                                    │                                        │
-│  ┌─────────────────────────────────┼─────────────────────────────────┐     │
-│  │                   EXTERNAL INTELLIGENCE FEEDS                      │     │
-│  │  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐│     │
-│  │  │  USGS  │ │  NASA  │ │ ADS-B  │ │OpenSky │ │CoinGecko│ │GDACS  ││     │
-│  │  │Earthquakes│ │EONET  │ │Exchange│ │Network │ │ Crypto │ │Disasters│     │
-│  │  └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘│     │
-│  │  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐│     │
-│  │  │  N2YO  │ │MarineTraffic│ │WindyAPI│ │GoogleEarth│ │NewsAPI ││     │
-│  │  │Satellites│ │   AIS    │ │Weather │ │  Engine   │ │ Headlines│     │
-│  │  └────────┘ └────────┘ └────────┘ └────────┘ └────────┘ └────────┘│     │
-│  └──────────────────────────────────────────────────────────────────┘     │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+Frontend: React 18 + TypeScript + Vite + Tailwind CSS + Three.js
+State: Zustand
+Icons: Lucide React
+Build: Vite 5
+```
+
+### Project Structure
+```
+📦 World-Monitor-Clawchan-Intelligence
+├── 📁 backend/          # API servers & microservices
+│   ├── api-gateway/
+│   ├── websocket-server/
+│   └── data-ingestion/
+├── 📁 config/           # Configuration files
+├── 📁 docs/             # Documentation
+│   └── presentations/   # Visual assets & slides
+├── 📁 frontend/         # React frontend application
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── widgets/     # 11 intelligence widgets
+│   │   │   ├── ui/          # shadcn/ui components
+│   │   │   └── Globe3D.tsx  # 3D globe component
+│   │   ├── store/           # Zustand state management
+│   │   ├── api/             # API integrations
+│   │   └── hooks/           # Custom React hooks
+│   └── public/
+├── 📁 infra/            # Infrastructure & deployment
+├── 📁 ml/               # Machine learning models
+├── 📁 scripts/          # Utility scripts
+├── 📁 security/         # Security configurations
+└── 📁 tests/            # Test suites
 ```
 
 ---
 
-## 🚀 QUICK DEPLOYMENT
+## 🚀 Getting Started
 
 ### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
-# Required
-node >= 20.0.0
-python >= 3.11
-go >= 1.21
-rust >= 1.75
-docker >= 24.0
-kubectl >= 1.28
-terraform >= 1.6
+# Clone repository
+git clone https://github.com/blackdragonspear62/World-Monitor-Clawchan-Intelligence.git
+cd World-Monitor-Clawchan-Intelligence
+
+# Install dependencies
+cd frontend
+npm install
+
+# Start development server
+npm run dev
 ```
 
-### Clone & Install
+### Build for Production
 
 ```bash
-# Clone the repository
-git clone https://github.com/clawchan/agency.git
-cd agency
-
-# Install all dependencies across services
-npm run install:all
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your API keys
-
-# Start development environment
-npm run dev:full
-```
-
-### Production Deployment
-
-```bash
-# Deploy to AWS EKS
-npm run deploy:production
-
-# Or use Docker Compose for on-premise
-docker-compose -f infra/docker/docker-compose.yml up -d
+npm run build
 ```
 
 ---
 
-## 📊 TECHNOLOGY STACK
+## 📡 Data Sources
 
-### Frontend
-- **Framework**: React 18.2 + TypeScript 5.3
-- **Build Tool**: Vite 5.0
-- **3D Engine**: Three.js + React Three Fiber
-- **State Management**: Zustand + Immer
-- **Data Fetching**: TanStack Query v5
-- **Styling**: Tailwind CSS + shadcn/ui
-- **Maps**: Leaflet.js + Google Maps Satellite
-- **Charts**: D3.js + Recharts
-
-### Backend Services
-
-| Service | Language | Framework | Purpose |
-|---------|----------|-----------|---------|
-| API Gateway | Node.js | Apollo Server + GraphQL | Unified API |
-| ML/AI Engine | Python | FastAPI + TensorFlow | Predictive Analytics |
-| Stream Processor | Go | Gin + WebSocket | Real-time Data |
-| High-Perf Compute | Rust | Tokio + Axum | ADS-B Processing |
-| Enterprise Service | Java | Spring Boot 3 | Business Logic |
-| Real-time Engine | Elixir | Phoenix + Absinthe | Live Updates |
-| HPC Module | C++ | Boost + WebSocket++ | Signal Processing |
-
-### Infrastructure
-- **Cloud**: AWS (EKS, RDS, ElastiCache, CloudFront)
-- **Containers**: Docker + Kubernetes
-- **IaC**: Terraform + Helm
-- **CI/CD**: GitHub Actions
-- **Monitoring**: Prometheus + Grafana + DataDog
-- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
+| Source | Data Type | API Endpoint |
+|--------|-----------|--------------|
+| USGS | Earthquakes | `https://earthquake.usgs.gov/fdsnws/event/1/` |
+| ADS-B Exchange | Aircraft | `https://api.adsbexchange.com/` |
+| N2YO | Satellites | `https://api.n2yo.com/rest/v1/` |
+| CoinGecko | Crypto | `https://api.coingecko.com/api/v3/` |
+| OpenWeatherMap | Weather | `https://api.openweathermap.org/data/2.5/` |
+| The Guardian | News | `https://content.guardianapis.com/` |
 
 ---
 
-## 🔐 SECURITY
+## 🎨 Visual Design
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SECURITY CLEARANCE LEVELS                     │
-├─────────────────────────────────────────────────────────────────┤
-│  🔴 LEVEL 5 - COSMIC TOP SECRET    │  Nuclear / Intelligence    │
-│  🟠 LEVEL 4 - TOP SECRET           │  Military Operations       │
-│  🟡 LEVEL 3 - SECRET               │  Operational Data          │
-│  🟢 LEVEL 2 - CONFIDENTIAL         │  Internal Systems          │
-│  🔵 LEVEL 1 - RESTRICTED           │  Public Interface          │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-- **Authentication**: OAuth 2.0 + OIDC + MFA
-- **Authorization**: RBAC + ABAC
-- **Encryption**: AES-256-GCM + TLS 1.3
-- **Network**: VPC + WAF + DDoS Protection
-- **Audit**: Complete activity logging
+<img src="docs/presentations/clawchan-closing.png" width="100%" alt="Thank You">
 
 ---
 
-## 📈 PERFORMANCE METRICS
+## 📝 License
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    SYSTEM PERFORMANCE                            │
-├─────────────────────────────────────────────────────────────────┤
-│  ⚡ API Response Time      │  < 50ms (p99)                      │
-│  🌍 Globe Render FPS       │  60 FPS (WebGL 2.0)                │
-│  ✈️ Aircraft Updates       │  10,000+ / second                  │
-│  🛰️ Satellite Tracking     │  5,000+ objects                    │
-│  📡 WebSocket Connections  │  100,000+ concurrent               │
-│  💾 Database Queries       │  1M+ / minute                      │
-│  🔄 Data Ingestion         │  500K events / second              │
-└─────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🤝 CONTRIBUTING
-
-We welcome contributions from cleared personnel. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-```bash
-# Fork and clone
-git clone https://github.com/YOUR_USERNAME/agency.git
-
-# Create feature branch
-git checkout -b feature/your-feature-name
-
-# Commit with conventional commits
-git commit -m "feat: add new intelligence module"
-
-# Push and create PR
-git push origin feature/your-feature-name
-```
-
----
-
-## 📜 LICENSE
-
-**CLASSIFIED - CLAWCHAN INTELLIGENCE AGENCY**
-
-Unauthorized access, use, or distribution is strictly prohibited and may result in severe civil and criminal penalties.
-
----
-
-## 🎖️ ACKNOWLEDGMENTS
-
-- **NASA** - Earth observation data
-- **USGS** - Seismic monitoring
-- **OpenSky Network** - Aircraft tracking
-- **N2YO** - Satellite tracking
-- **Palantir Technologies** - Inspiration for data integration
+MIT License - See [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-**"In Data We Trust, In Intelligence We Act"**
+**Built with ❤️ by Clawchan Intelligence Agency**
 
-© 2024 Clawchan Intelligence Agency. All rights reserved.
+[🌐 Live Demo](https://g5dg7g55gd4ze.ok.kimi.link) • [📊 GitHub](https://github.com/blackdragonspear62/World-Monitor-Clawchan-Intelligence)
 
 </div>
